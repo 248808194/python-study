@@ -1,0 +1,2 @@
+导入模块的时候python会有自己的一个环境变量
+可以用print (sys.path)
