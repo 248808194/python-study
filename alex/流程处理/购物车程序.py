@@ -25,11 +25,23 @@ product_list = [
 
 shop_list = [] #提前定义一个空的购物车列表
 
+
+# 0 ('iphone', 100)
+# 1 ('moto', 200)
+# 2 ('xp', 300)
+# 3 ('mac book', 300)
+# 4 ('mac air', 500)
+# 5 ('mac pro', 400)
+# 6 ('itouch', 150)
+# index = item[0]
+# p_name = item[1][0]
+# p_price = item[1][1]
+
 while exit_flag is not True:
     print("product list".center(50,'-'))
-    for item in enumerate(product_list):
+    for item in enumerate(product_list): #打印出索引值+列表元素 (元祖表示出来)
         index = item[0]
-        p_name = item[1][0]
+        p_name = item[1][0] #
         p_price = item[1][1]
         print(index,'.',p_name,p_price)
     user_chose = input("[q=quit/c=check],waht do you want buy:")
