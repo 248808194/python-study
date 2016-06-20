@@ -29,13 +29,13 @@ def welcome(wel):
 def user():
     import operate
     while True:
-        user_1 = input("username:")
-        user_2 = input("passwd:")
-        operate.gouwche.append(user_1)
-        if user_1 in dic.keys():
-            passw = dic[user_1]
-            if user_2 == passw:
-                welcome(user_1)
+        user_1 = input("username:") #输入用户名
+        user_2 = input("passwd:") #输入密码
+        operate.gouwche.append(user_1) #定义是谁的购物车
+        if user_1 in dic.keys(): #判断如果输入的user_1在dic的keys中
+            passw = dic[user_1] #将正确的用户密码赋值给passw
+            if user_2 == passw: #如果用户输入的密码等于数据库中存储的密码的话
+                welcome(user_1) #执行welcome()函数
                 break
             else:
                 print("\033[35m您~输入的账号或密码错误\033[0m")
@@ -48,6 +48,7 @@ def user():
 def shopp():
     import operate
     if not operate.gouwche: #判断huo是否为空,huo是设置为空的字典，存放当前用户所添加的东西，
+        #判断字典，是否为空的方法，if dict: 或者 if not dict:
         print("\033[35m-------------------------------购物车没货物-------------------------------\033[0m")
     else:  #不为空则结算
         cart()#加载显示购物车物品的函数

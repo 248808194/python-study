@@ -36,7 +36,7 @@ def welcome():
        enr___________________注册用户
        exit__________________返回
         ''')
-    elif s_1 == 'buy':
+    elif s_1 == 'buy': #判断用户输入，如果输入buy执行enter.shopp()函数，下同
         enter.shopp()
     elif s_1 == 'und':
         enter.dele()
