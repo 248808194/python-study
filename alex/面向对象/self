@@ -1,0 +1,12 @@
+self 是什么鬼
+
+self 是python自动传递的形式参数
+class sqlhelper:
+    def fetch(self,sql): #self指的是类实例对象本身
+        print(self.hhost)
+        print(self.uusername)
+        print(self.password)
+        print(sql)
+
+
+在python只要类() 就会自动执行__init__方法

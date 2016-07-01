@@ -1,0 +1,82 @@
+函数式编程，面向对象编程实现，发送邮件的功能
+
+#函数
+
+def mail(email,messages):
+    print("send mail")
+    return True
+
+mail("zhoutao@zhoutao.name","hello world")
+
+
+面向对象： 类 ，对象
+
+class Foo:
+    def mail(self,email,message):
+        print("send mail")
+        return True
+
+#调用
+1：创建对象，类名()
+obj = Foo()
+通过对象去执行方法
+obj.mail("zhoutao@zhoutao.name","good man")
+
+
+3:类和对象
+    a.创建类
+        class 类名:
+            def 方法名(self,xxxx):
+                pass
+    b:创建对象
+        对象 = 类名()
+
+    c: 通过对象执行方法
+         对象.方法名(123)
+
+4:函数式编程：每一次操作的时候需要把主机名，用户名密码从新传一遍
+       def fetch(host,username,password,sql):
+            pass
+       def create(host,username,password,sql):
+            pass
+       def remove(host,username,password,sql):
+            pass
+       def modify(host,username,password,sql):
+            pass
+
+
+面向对象：
+    class sqlhelper: #类
+    #fetch create remove modify都在类里面写着
+       def fetch(self,sql):
+            pass
+       def create(self,sql):
+            pass
+       def remove(self,sql):
+            pass
+       def modify(self,sql):
+            pass
+
+obj =  sqlhelper() #对象
+obj.hhost = "c1.salt.com"#把c1.salt.com 保存在对象里面，对象.hhost就是把c1.salt.com 这个值赋值到对象里面
+obj.uusername = "zhoutao"
+obj.password = "123"
+对象是由类创建的
+对象如果执行方法的时候，就会根据类对象指针在类(sqlhelper)里面去寻找方法
+
+在obj对象里面封装了hhost ,uusername, password ，在创建obj对象的时候内部有一个类对象指针指向sqlhelper
+
+
+什么时候用面向对象
+当某一些函数中有相同参数时，就可以改变成面向对象的方式，将参数值一次性的封装在对象中，以后去对象中取值
+
+
+在python只要类() 就会自动执行__init__方法
+
+类中有特殊的方法__init__ 类()自动执行__init__方法
+
+__init__ 叫 构造方法
+
+
+面向对象三大特性
+        封装，继承，多态
