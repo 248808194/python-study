@@ -86,10 +86,12 @@ myseq="""[a:1,b:2,c:3]
 [a:2,c:4,m:6,r:4]
 [a:3,c:2,m:7,r:5]
 """
-myseq=myseq.split()
+# a=','.join(set(myseq.split('\n')))
+a=set(myseq.split("\n"))
+b=",".join(a)
+print(b)
 
-a=["aa(1)","bb(2)"]
 
 
 
-print(a[1])
+
