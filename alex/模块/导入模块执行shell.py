@@ -3,6 +3,9 @@
 # Author: Zhoutao
 
 import os
+#from XXX import  XXX as XXXX_XX
+#XXXX_XX.XX()
+
 
 # os.system("dir")
 #保存命令读出来
