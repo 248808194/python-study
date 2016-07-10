@@ -15,7 +15,7 @@ print(a)
 print(type(a))
 print(a.tm_year,a.tm_mon,a.tm_mday) #利用time.gmtime
 print(time.localtime()) #本地时间#其实和gmtime一样只是是本地时间
-print(time.mktime(time.localtime())) #将struct_time转成unix时间戳格式
+print(time.mktime(time.localtime()),"ASDF") #将struct_time转成unix时间戳格式
 #time.sleep(4) #延时4秒钟，其实就是和shell sleep一样
 print(time.strftime("%Y-%m-%d-%H",time.localtime())) #将struct转换成指定格式 #以后常用
 print(time.strftime("%Y-%m-%d-%H",time.gmtime())) #以后常用

@@ -11,3 +11,17 @@ def send(a,b,c=123,d=1234)
 4：*参数
 def foo(*args):
     print
+
+
+def foo():
+    def bar():
+        print("test no ()")
+    return bar #不带（）表示只return这个函数
+
+foo()
+
+def foo():
+    def bar():
+        print("test,with ()")
+    return bar() #带（）表示return 执行这个函数的结果
+foo()

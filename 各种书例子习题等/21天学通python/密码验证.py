@@ -2,16 +2,24 @@
 # -*- coding:utf-8 -*-
 # Author: Zhoutao
 
-alist={"name":"zhoutao","password":"123456"}
-
-
-
-a = {"arg1": '1', 'arg2': 'two', 'arg3': None}
+a={"city":"shanghai","name":"zhoutao"}
 def foo(**kwargs):
-    print("arg1")
+    if kwargs["city"] == "shanghai" and kwargs["name"] == "zhoutao":
+        print("pass")
+        return "pass"
+    else:
+        return 0
+a={"city":"shanghai","name":"zhoutao"}
 
 
-foo(**a)
+print(foo(**a))
+
+def person(name,age,*args,city,job):
+    print(name,age,city,job,args)
+
+
+person("zt",18,city="shanghai",job="enginner")
+
 
 
 

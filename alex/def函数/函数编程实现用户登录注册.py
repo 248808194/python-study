@@ -2,37 +2,40 @@
 # -*- coding:utf-8 -*-
 # Author: Zhoutao
 
+def regiter(u_name,u_passwd):
+    with open("userdb","a") as db:
+        newuser = "\n"+u_name + ":"   + u_passwd
+        db.write(newuser)
 
-def login(username,passwd):
-    with open('userdb','r') as userfile:
-        for line in userfile:
+
+def login(u_name,u_passwd):
+    with open("userdb","r") as db:
+        for line in db:
             line = line.strip().split(':')
-            if line[0] == username and line[1] == passwd:
-                print("登录成功")
+            print(line[0],line[1])
+            if line[0] == u_name and line[1] == u_passwd:
+                print("welcone")
                 return True
-        else:
-            print("登录失败")
-            return  False
+            else:
+                print("worng username or password")
+            return False
 
 
-def regiter(username,passwd):
-    with open('userdb','a') as userfile:
-        newuser = "\n"+username+":"+passwd
-        userfile.write(newuser)
+
 
 
 def main():
-    aa=input("请输入1:登录:/2:注册:")
-    if aa == '1':
-        username = input("输入用户名:")
-        passwd = input("输入密码:")
-        login(username,passwd)
-    elif aa == '2':
-        username = input("输入用户名:")
-        passwd = input("输入密码:")
-        regiter(username,passwd)
-    else:
-        print("输入不正确从新输入")
-
+    while True:
+        inp=input("enter you chose A:/LOGIN;B:/regiter")
+        if inp == "A":
+            u_name = input("enter you username:")
+            u_passwd = input("enter you password:")
+            login(u_name,u_passwd)
+        elif inp == 'B':
+            u_name = input("enter you username:")
+            u_passwd = input("enter you password:")
+            regiter(u_name,u_passwd)
+        else:
+            print("worng input ")
 
 main()
