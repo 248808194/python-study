@@ -1,10 +1,12 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="123" type="PLAIN_TEXT" />
       <mapping pattern="属性总结" type="PLAIN_TEXT" />
       <mapping pattern="多态" type="PLAIN_TEXT" />
       <mapping pattern="phone" type="PLAIN_TEXT" />
       <mapping pattern="log" type="PLAIN_TEXT" />
+      <mapping pattern="@staticmethod和@classmethod的作用与区别" type="PLAIN_TEXT" />
       <mapping pattern="log2" type="PLAIN_TEXT" />
       <mapping pattern="INFO" type="PLAIN_TEXT" />
       <mapping pattern="资料" type="PLAIN_TEXT" />
