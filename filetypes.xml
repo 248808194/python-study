@@ -10,6 +10,7 @@
       <mapping pattern="log2" type="PLAIN_TEXT" />
       <mapping pattern="INFO" type="PLAIN_TEXT" />
       <mapping pattern="资料" type="PLAIN_TEXT" />
+      <mapping pattern="python中真假" type="PLAIN_TEXT" />
       <mapping pattern="BB" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
