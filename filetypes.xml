@@ -6,6 +6,7 @@
       <mapping pattern="多态" type="PLAIN_TEXT" />
       <mapping pattern="phone" type="PLAIN_TEXT" />
       <mapping pattern="log" type="PLAIN_TEXT" />
+      <mapping pattern="carddata" type="PLAIN_TEXT" />
       <mapping pattern="@staticmethod和@classmethod的作用与区别" type="PLAIN_TEXT" />
       <mapping pattern="log2" type="PLAIN_TEXT" />
       <mapping pattern="INFO" type="PLAIN_TEXT" />
