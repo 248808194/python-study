@@ -8,6 +8,6 @@ def a(b):
 
 
 c=a(20)
-for i in c.next():
-    print i
+for i in c:
+    print(i)
 

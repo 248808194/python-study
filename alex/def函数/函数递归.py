@@ -8,4 +8,5 @@ def func(n):
         return "END"
     return func(n)
 
-a=func(1)
+a=func(2)
+print(a)

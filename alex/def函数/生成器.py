@@ -23,16 +23,17 @@ ret = func()
 for i in ret:
     print(i)
 
-def myrange(arg):
-    start = 0
-    while True:
-        if start > 10:
-            return
-        yield start
-        start += 1
-
-ret = myrange(10)
-print(ret)
-
-for i in ret:
-    print(i)
+print("___________")
+# def myrange(arg):
+#     start = 0
+#     while True:
+#         if start > 10:
+#             return
+#         yield start
+#         start += 1
+#
+# ret = myrange(10)
+# print(ret)
+#
+# for i in ret:
+#     print(i)
