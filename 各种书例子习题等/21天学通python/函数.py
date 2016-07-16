@@ -83,3 +83,5 @@ def foo(a,b):
 for i in foo(1,10):
     print(i)
 
+    type(object)
+

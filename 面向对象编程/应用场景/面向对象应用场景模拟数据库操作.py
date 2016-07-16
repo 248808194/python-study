@@ -36,3 +36,5 @@ obj.select()
 obj.update()
 obj.insert()
 obj.delete()
+a=obj.__dict__
+print(a)
