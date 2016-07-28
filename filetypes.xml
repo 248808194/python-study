@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="db" type="JSON" />
       <mapping pattern="123" type="PLAIN_TEXT" />
       <mapping pattern="属性总结" type="PLAIN_TEXT" />
       <mapping pattern="多态" type="PLAIN_TEXT" />
