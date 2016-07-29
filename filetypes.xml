@@ -9,6 +9,7 @@
       <mapping pattern="BB" type="PLAIN_TEXT" />
       <mapping pattern="资料" type="PLAIN_TEXT" />
       <mapping pattern="@staticmethod和@classmethod的作用与区别" type="PLAIN_TEXT" />
+      <mapping pattern="概念" type="PLAIN_TEXT" />
       <mapping pattern="python中真假" type="PLAIN_TEXT" />
       <mapping pattern="log" type="PLAIN_TEXT" />
       <mapping pattern="log2" type="PLAIN_TEXT" />
