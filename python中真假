@@ -1,0 +1,10 @@
+
+if 条件:
+    print "xxx"
+
+作为判断条件来说：
+None， 0， False， ''，( ), [] , {}      都是假， 都不执行print
+not None, -1,1 ,  True        都是真，都执行print
+
+但是，这不代表
+None==True 或者 None==False

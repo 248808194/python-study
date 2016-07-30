@@ -37,6 +37,7 @@ foo(**a) #{'b': 2, 'a': 1} 相当于直接赋值
 
 
 print("万能参数")
+a={'a':1,'b':2}
 def foo(*args, **kwargs): #一定是一个*在前面
     print(args)
     print(kwargs)

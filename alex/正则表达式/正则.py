@@ -126,7 +126,7 @@ print(r.groupdict())
 #findall 分组
 import  re
 origin = "has hal asdf1231gdfgd"
-r= re.findall("h\w+",origin) #加上一个?P<keyname> 把匹配到的东西加上一个值就是字典的key
+r= re.findall("h\w+",origin) #
 print(r)
 
 import  re
