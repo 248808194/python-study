@@ -7,7 +7,12 @@
 # job = input("input your job:")
 #
 # #msg='''infomaion of user is %s age is %s job is %s"''' % (name ,age,job )
-  print('''infomaion of user is %s age is %s job is %s"''' % (name ,age,job ))
+# print('''infomaion of user is %s age is %s job is %s"''' % (name ,age,job ))
 # #print(msg)
+
+a={"name":"zhoutao","age":"18"}
+
+print("my name is {name},{age} old".format(name=a["name"],age=a["age"]))
+
 
 

@@ -1,0 +1,6 @@
+select,poll ,epoll
+
+
+连接，收发消息 socket会发生变化
+什么时候变化，连接
+

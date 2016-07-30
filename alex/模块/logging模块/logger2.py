@@ -1,36 +1,46 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-# Author: Zhoutao
+import  logging
 
-#create logger
-import logging
-logger = logging.getLogger("TEST-LOG") #先获取logger对象
-logger.setLevel(logging.DEBUG) #定义一个全局的日志基准，其他定义的只能比我高，不能比我低
 
-#输入到什么地方-》屏幕
-ch = logging.StreamHandler() #日志打印到屏幕
-ch.setLevel(logging.DEBUG) #z只想在屏幕上打印DEBUG
-#输入到什么地方 -》 文件
-fh = logging.FileHandler("access.log")
-fh.setLevel(logging.DEBUG)
-fh1 = logging.FileHandler("1access.log")
-fh1.setLevel(logging.DEBUG)
+def logmod(ex):
+    #step1
+    # 定义logger日志对象，通常是模块名字;
+    # 定义全局日志等级
+    logger = logging.getLogger("testst")
+    logger.setLevel(logging.DEBUG)
 
-#设置输出格式
-formatter = logging.Formatter(
-    "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-) #定义输出格式
-ch.setFormatter(formatter) #给屏幕输出设定一个日志格式 #调用已经设定过的formatter格式
-fh.setFormatter(formatter)
-fh1.setFormatter(formatter)
+    #step 2
+    #定义日志输出到什么地方
+    # 屏幕
+    # 文件
+    #到屏幕
+    input_mirror = logging.StreamHandler() # 日志打印到屏幕
+    input_mirror.setLevel(logging.DEBUG) #只想在屏幕上打印出debug日志
 
-logger.addHandler(ch) #把日志打印到指定的handler里面
-logger.addHandler(fh)
-logger.addHandler(fh1)
+    #到文件
+    input_file = logging.FileHandler("access-loggger")
+    input_file.setLevel(logging.DEBUG)
 
-#开始打印日志
-logger.debug("test debug")
-logger.info("test info")
-logger.warning("test warning")
-logger.critical("test critcal")
-logger.error("test error ")
+
+    #step3
+    #formatter设置输出格式
+    # 3.1 定义文件的输出格式
+    # 3.2 定义屏幕的输出格式
+    formatter_type = logging.Formatter(
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
+
+    input_mirror.setFormatter(formatter_type)
+    input_file.setFormatter(formatter_type)
+
+    #step 4  日志打印到指定的Handler里面
+
+
+    logger.addHandler(input_mirror)
+    logger.addHandler(input_file)
+
+
+
+    logger.debug(ex)
+
+
+

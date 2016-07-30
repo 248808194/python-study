@@ -9,7 +9,7 @@
 
 """
 
-"""
+#"""
 all = "zhoutao"
 
 class SF1:
@@ -21,7 +21,7 @@ class SF1:
 obj= SF1(all)
 a=obj.show()
 print(a)
-"""
+#"""
 #通过方法完成分页功能
 class pager:
     def __init__(self,all_count):

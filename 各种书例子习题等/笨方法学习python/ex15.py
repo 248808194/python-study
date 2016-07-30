@@ -16,3 +16,6 @@ print("type the filename again:") #打印出一行文件，提示你再次输入
 file_again = input(">") #输入文件名
 txt_again = open(file_again) #读取文件
 print(txt_again.read())
+
+
+

@@ -1,4 +1,4 @@
-#对象中封装对象(传递对象) #可以防装多各对象
+#对象中封装对象(传递对象) #可以封装多个对象
 class C1:
     def __init__(self,name,obj):
         self.name = name
