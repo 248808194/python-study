@@ -5,41 +5,36 @@
 # Python 3.5
 
 import socketserver,json
-IP_PORT=("127.0.0.1",9999)
-
-
-class MYsocket_ftp_server(socketserver.BaseRequestHandler):
+IP_PORT = ("127.0.0.1",9999)
+class MYsocketserver(socketserver.BaseRequestHandler):
     def handle(self):
-        while True:
-            print("123")
-            date = self.request.recv(1024)
-            print(date)
-            if len(date) == 0:break
-            print("123")
-            task_date = json.loads(date.decode()) #bytes ----> str #loads json_str ----> python_dict
-            task_action = task_date.get("action") #get dict value
-            if hasattr(self,task_action):
-                func =getattr(self,"task_%s" % (task_action))
-                func(task_date)
-            else:
-                print("task %s not supported" %(task_action))
+        recv_msg = self.request.recv(1024)
+        recv_msg = str(recv_msg,encoding="utf8")
+        recv_msg_dict=json.loads(recv_msg) #str-dict
+        action = recv_msg_dict.get("action")
+        print(recv_msg_dict)
+        print(action)
 
-    def task_put(self,*args,**kwargs):
-        print("------put",args,kwargs)
-        filename = args[0].get("filename")
-        filesize = args[0].get("file_size")
-        server_response  = {"status":200}
-        self.request.send(bytes(json.dumps(server_response),encoding="utf8"))
-        with open(filename,"wb") as ftpfile:
-            recv_size = 0
-            while recv_size < filesize:
-                date = self.request.recv(1024)
-                ftpfile.write(date)
-                recv_size += len(date)
+        if hasattr(self,"%s"%(action)):
+            func=getattr(self,"%s"%action)
+            func(recv_msg_dict)
+
+
+    def put(self,*args,**kwargs):
+        filename = args[0].get("filename").split("\\")[-1]
+        print(filename)
+        filesize = args[0].get("filesize")
+        self.request.sendall(bytes("200",encoding="utf8"))
+        with open(filename,"wb") as file:
+            file_size = 0
+            while file_size < filesize:
+                recv_date = self.request.recv(1024)
+                len_recv_date = len(recv_date)
+                file_size +=len_recv_date
+                file.write(recv_date)
+
 
 
 if __name__ == "__main__":
-    server = socketserver.ThreadingTCPServer(IP_PORT,MYsocket_ftp_server)
-    print("12")
+    server = socketserver.ThreadingTCPServer(IP_PORT,MYsocketserver)
     server.serve_forever()
-
