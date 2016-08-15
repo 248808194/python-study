@@ -59,11 +59,11 @@ class ServerToGroup(Base):
 
 
 def init_db():
-    Base.metadata.create_all(engine)
+    Base.metadata.create_all(engine) #创建表函数
 
 
 def drop_db():
-    Base.metadata.drop_all(engine)
+    Base.metadata.drop_all(engine) #删除表删除表函数
 
 init_db()
 
@@ -90,7 +90,7 @@ session.commit()
 #改
 
 # session.query(Users).filter(Users.id > 2).update({"name" : "099"})
-# session.query(Users).filter(Users.id > 2).update({Users.name: Users.name + "099"}, synchronize_session=False)
+# session.query(Users).filter(Users.id > 2).update({Users.name: Users.name + "099"}, synchronize_session=False) 在原有基础上修改，#False - 不对session进行同步，直接进行delete or update操作
 session.query(Users).filter(Users.id > 2).update({"num": Users.num + 1}, synchronize_session="evaluate") #synchronize_session=“evaluate”用于数字
 session.commit()
 
