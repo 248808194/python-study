@@ -9,8 +9,8 @@ def get_target_file_name():
     return [ x for x in os.listdir("./source_file") if os.path.splitext(x)[1] == ".txt" ]
 """
 # print(os.path.isfile("data_1.txt")) #判断是否是文件返回的结果是True
-# print(os.path.splitext("test.py")[0]) #分割文件名与扩展名得到test
-# print(os.path.splitext("test.py")[1]) #分割文件名与扩展名得到py
+# print(os.path.splitext("menu.py")[0]) #分割文件名与扩展名得到test
+# print(os.path.splitext("menu.py")[1]) #分割文件名与扩展名得到py
 获取文件名，返回的是一个列表['data_1.txt', 'data_10.txt', 'data_11.txt'...........]
 """
 

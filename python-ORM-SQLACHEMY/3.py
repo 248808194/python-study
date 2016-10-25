@@ -51,21 +51,21 @@ init_db()
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# session.query(User).delete()
-# session.query(Group).delete()
-# session.commit()
-# session.add_all([
-#     Group(nid=3,caption="SA"),
-#     User(username="zhoutao",groupid=3)
-# ])
+session.query(User).delete()
+session.query(Group).delete()
+session.commit()
+session.add_all([
+    Group(nid=3,caption="SA"),
+    User(username="zhoutao",groupid=3)
+])
 
 session.commit()
-#
-# ret =session.query(User).join(Group) #生成的sql语句
-# print(ret)
-# result = session.query(User.username,Group.caption).join(Group,isouter=True).all() #一对多连表查询 ,查询user表中的username 和group表里的caption
-# print(result)
-# #select * from user left join group on user.group_id = group.nid
+
+ret =session.query(User).join(Group) #生成的sql语句
+print(ret)
+result = session.query(User.username,Group.caption).join(Group,isouter=True).all() #一对多连表查询 ,查询user表中的username 和group表里的caption
+print(result)
+#select * from user left join group on user.group_id = group.nid
 
 #反向查找
 
