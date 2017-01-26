@@ -15,6 +15,6 @@ transport.connect(username="root",password="newbie")
 
 sftp = paramiko.SFTPClient.from_transport(transport)
 sftp.put("id_rsa","/tmp/id_rsa")
-sftp.get("test.py","test.py")
+sftp.get("menu.py","menu.py")
 
 transport.close()

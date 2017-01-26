@@ -44,7 +44,7 @@ def gci(filepath):
                     filelines =len(rfile.readlines())
                     linecount.append(filelines)
 
-gci("C:/Users/ZhouTao/PycharmProjects/python-study/")
+gci("D:/python-study/")
 
 print(linecount)
 s=0
